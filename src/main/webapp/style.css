@@ -5,9 +5,12 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
 	font-weight:400;
+	text-align:center;
 }
 h1{
 	color: #000000;
+	text-align:center;
+	
 }
 .Botao1 {
 	text-decoration: none;
@@ -18,4 +21,5 @@ h1{
 	font-weight:700;
 	border-radius: 5px;
 	
+
 }
