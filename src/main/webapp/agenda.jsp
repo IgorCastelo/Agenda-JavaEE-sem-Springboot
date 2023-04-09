@@ -10,7 +10,7 @@
 </head>
 <body>
 <!--<img  src="imagens/png1.png">--->
-<h1 >Contacts</h1>
-<a href="" class="Botao1">Novo contato</a>
+<h1 >Contatos</h1>
+<a href="novo.html" class="Botao1">+ novo contato</a>
 </body>
 </html>
