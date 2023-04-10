@@ -22,9 +22,21 @@ public class DAO {
 	} catch (Exception e) {
 		System.out.println(e);
 		return null;
+		}
 	}
+	
+	/**CRUDE CREATE**/ 
+	public void inserirContato(JavaBeans contato) {
+		String create ="insert into contatos (nome,fone,email) values (?,?,?)";
+		try {
+			//abrir conexao
+			Connection con = conectar();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
-	//teste de conexão
+	
+	/**teste de conexão
 	public void testeConexao() {
 		try {
 			Connection con = conectar();
@@ -34,5 +46,5 @@ public class DAO {
 			System.out.println(e);
 		}
 		 
-	}
+	}**/
 }

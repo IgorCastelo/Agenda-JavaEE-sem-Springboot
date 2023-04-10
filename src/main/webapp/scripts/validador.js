@@ -16,7 +16,7 @@
 			 return false
 		} else{
 			 document.forms["frmContato"].submit()
-			 alert('contato adicionado com sucesso!')
+			 alert('contato adicionado com sucesso!'+nome)
 		 }
 	 }
  
