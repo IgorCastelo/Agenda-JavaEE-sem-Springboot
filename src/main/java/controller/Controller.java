@@ -24,14 +24,16 @@ public class Controller extends HttpServlet {
 		String action = request.getServletPath();
 		//System.out.println(action);
 		if (action.equals("/main")) {
-			contatos(request, response);
+			acessarContatos(request, response);
 		}else if(action.equals("/insert")) {
 			novoContato(request,response);
+		}else {
+			response.sendRedirect("index.html");
 		}
 	}
 
 	// Listar contatos
-	protected void contatos(HttpServletRequest request, HttpServletResponse response)
+	protected void acessarContatos(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.sendRedirect("agenda.jsp");
 	}
@@ -50,5 +52,7 @@ public class Controller extends HttpServlet {
 		contato.setEmail(request.getParameter("email"));
 		//invocar o metodo inderirContato() passando o objeto contato 
 		dao.inserirContato(contato);
+		//Redirecionar para o documento agenda.jsp
+		response.sendRedirect("main");
 	}
 }
