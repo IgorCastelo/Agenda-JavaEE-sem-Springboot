@@ -12,7 +12,7 @@ public class JavaBeans {
 		super();
 	}
 	
-	public JavaBeans(String idcon, String nome, String fone, String email ) {
+	public JavaBeans(String idcon, String nome, String fone, String email ) { 
 		super();
 		this.idcon = idcon;
 		this.nome =nome;

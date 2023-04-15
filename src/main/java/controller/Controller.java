@@ -1,11 +1,13 @@
 package controller;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import model.DAO;
 import model.JavaBeans;
 
@@ -35,7 +37,17 @@ public class Controller extends HttpServlet {
 	// Listar contatos
 	protected void acessarContatos(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.sendRedirect("agenda.jsp");
+		//Criando um objeto que irá receber os dados JavaBeans
+		ArrayList<JavaBeans> lista = dao.listarContatos();
+		
+		/**Teste recebimento da lista	
+		for(int i = 0;i<lista.size();i++) {
+				System.out.println(lista.get(i).getIdcon());
+				System.out.println(lista.get(i).getNome());
+				System.out.println(lista.get(i).getFone());
+				System.out.println(lista.get(i).getEmail());
+		}**/
+		
 	}
 	protected void novoContato(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -46,7 +58,7 @@ public class Controller extends HttpServlet {
 		System.out.println(request.getParameter("email"));
 		*/
 		
-		//setar as variavies JavaBeans
+		//setar as variáveis JavaBeans
 		contato.setNome(request.getParameter("nome"));
 		contato.setFone(request.getParameter("fone"));
 		contato.setEmail(request.getParameter("email"));
