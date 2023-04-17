@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -26,7 +27,7 @@ public class Controller extends HttpServlet {
 		String action = request.getServletPath();
 		//System.out.println(action);
 		if (action.equals("/main")) {
-			acessarContatos(request, response);
+			Contatos(request, response);
 		}else if(action.equals("/insert")) {
 			novoContato(request,response);
 		}else {
@@ -35,10 +36,16 @@ public class Controller extends HttpServlet {
 	}
 
 	// Listar contatos
-	protected void acessarContatos(HttpServletRequest request, HttpServletResponse response)
+	protected void Contatos(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//Criando um objeto que irá receber os dados JavaBeans
 		ArrayList<JavaBeans> lista = dao.listarContatos();
+		
+		//Encaminhar a lista ao documento agenda.jsp
+		request.setAttribute("contatos", lista);
+		RequestDispatcher rd =  request.getRequestDispatcher("agenda.jsp");
+		rd.forward(request, response);
+		
 		
 		/**Teste recebimento da lista	
 		for(int i = 0;i<lista.size();i++) {

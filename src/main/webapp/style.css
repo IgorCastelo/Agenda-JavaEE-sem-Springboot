@@ -36,3 +36,20 @@ h1{
 	border-radius:5px;
 	
 }
+
+#tabelaa{
+	margin-top: 30px;
+	border-collapse:collapse;
+}
+#tabelaa th{
+	border:1px solid #ddd;
+	padding:10px;
+	text-align:left;
+	background-color:#000000;
+	color: #ffffff;
+}
+#tabelaa td{
+	border:1px solid #ddd;
+	padding:10px;
+	
+}

@@ -59,38 +59,37 @@ public class DAO {
 	 * 
 	 * }
 	 **/
-	
-	/**CRUD READ**/
-	
-	public ArrayList<JavaBeans> listarContatos(){
-		//Criando um onjeto para acessar a classe JavaBeans 
+
+	/** CRUD READ **/
+
+	public ArrayList<JavaBeans> listarContatos() {
+		// Criando um objeto para acessar a classe JavaBeans
 		ArrayList<JavaBeans> contatos = new ArrayList<>();
-		
+
 		String read = "SELECT * FROM contatos ORDER BY nome";
 		try {
-			
+
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(read);
 			ResultSet rs = pst.executeQuery();
-			//O laço abaixo será executado enquanto houver contatos 
-			while(rs.next()){
-				//variáveis de apoio que recebem os dados do banco
-				 String idcon = rs.getString(1);
-				 String nome = rs.getString(2);
-				 String fone = rs.getString(3);
-				 String email = rs.getString(4);
-				//Poulando a ARry list
-				 contatos.add(new JavaBeans (idcon,nome,fone,email));
-				 
-				 
-				 
-			}con.close();
-			return contatos;
 			
+			// O laço abaixo será executado enquanto houver contatos
+			while (rs.next()) {
+				// variáveis de apoio que recebem os dados do banco
+				String idcon = rs.getString(1);
+				String nome = rs.getString(2);
+				String fone = rs.getString(3);
+				String email = rs.getString(4);
+				// Populando a Array list
+				contatos.add(new JavaBeans(idcon, nome, fone, email));
+
+			}
+			con.close();
+			return contatos;
+
 		} catch (Exception e) {
 			System.out.println(e);
 			return null;
 		}
-		}	
 	}
-
+}
