@@ -80,6 +80,15 @@ public class Controller extends HttpServlet {
 	protected void listarContato(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		 String idcon = request.getParameter("idcon");
-		 System.out.println(idcon);
+		 //setar a variável JavaBeans
+		 contato.setIdcon(idcon);
+		 //Executar o método selecionarContato (DAO)
+		 dao.selecionarContato(contato);
+		 /**teste de recebimento
+		 System.out.println(contato.getIdcon());
+		 System.out.println(contato.getNome());
+		 System.out.println(contato.getFone());
+		 System.out.println(contato.getEmail());
+**/
 	}
 }
