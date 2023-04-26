@@ -25,6 +25,7 @@ for(int i = 0; i<lista.size(); i++){
 <body>
 	<h1>Agenda de Contatos</h1>
 	<a href="novo.html" class="Botao1">+ novo contato</a>
+	<a href ="report" class="Botao2"> Relatório</a>
 	<table id="tabela">
 		<thead>
 			<tr>
