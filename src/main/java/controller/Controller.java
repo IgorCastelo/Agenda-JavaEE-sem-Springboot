@@ -36,7 +36,7 @@ public class Controller extends HttpServlet {
 		if (action.equals("/main")) {
 			contatos(request, response);
 		} else if (action.equals("/insert")) {
-			novoContato(request, response);
+			adicionarContato(request, response);
 		} else if (action.equals("/select")) {
 			listarContato(request, response);
 		} else if (action.equals("/update")) {
@@ -71,7 +71,7 @@ public class Controller extends HttpServlet {
 
 	}
 
-	protected void novoContato(HttpServletRequest request, HttpServletResponse response)
+	protected void adicionarContato(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		/*
 		 * Teste de recebimento dos dados do formulario
