@@ -1,7 +1,7 @@
 
-O objetivo deste repositorio é dar os primeiros passos no desenvolvimento Web back-end e full-stack usando a linguagem Java, sem a utilização do SpringBoot, visando entender as bases para o desenvolvimento WEB.
-Tecnologias usadas nesse curso:
-  - Servidor TomCat
+Repositorio dedicado ao aprendizado das tecnologias utilizadas no desonvolvimento WEB. Não foi utilizado SpringBoot nesse projeto tendo em vista priorizar o entendimento puro das bases da WEB
+
+- Servidor TomCat
   - Java EE - Servlet e JSP
   -  IDE Eclipse
   - JDBC (Java Database Connectivity)
