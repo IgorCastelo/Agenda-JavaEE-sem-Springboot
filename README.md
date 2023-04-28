@@ -1,7 +1,7 @@
 
-#Repositorio dedicado ao aprendizado das tecnologias utilizadas no desonvolvimento WEB. Não foi utilizado SpringBoot nesse projeto tendo em vista priorizar o entendimento puro das bases da WEB
+# Repositorio dedicado ao aprendizado das tecnologias utilizadas no desonvolvimento WEB. Não foi utilizado SpringBoot nesse projeto tendo em vista priorizar o entendimento puro das bases da WEB
 
-# Tecnoloigas usadas nesse projeto:
+ Tecnoloigas usadas nesse projeto:
   - Servidor TomCat
   - Java EE - Servlet e JSP
   - IDE Eclipse
